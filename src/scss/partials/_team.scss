@@ -1,0 +1,90 @@
+@import "variables";
+
+
+.team{
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px;
+    overflow: hidden;
+    @media screen and (max-width: 1023px){
+      flex-direction: column;
+    }
+  }
+  &__photo{
+    position: relative;
+    flex: 0 0 400px;
+    @media screen and (max-width: 1023px){
+      flex: 0 0 500px;
+    }
+  }
+  &__img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+    @media screen and (max-width: 1023px){
+      border-radius: 12px 12px 0 0;
+    }
+  }
+  &__info {
+    background-color: $bg;
+    border-radius: 0 12px 12px 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1023px){
+      border-radius: 0 0 12px 12px;
+    }
+
+  }
+  &__info .subject{
+    margin: 0 0 5px;
+  }
+  &__title {
+    margin: 0 0 30px;
+  }
+  &__name {
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text-color;
+    margin: 0 0 6px;
+  }
+  &__position {
+    font-family: 'Montserrat-regular',sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: $text-color;
+    margin: 0;
+  }
+  & .slick-dots{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  & .slick-dots li{
+    &.slick-active button{
+      opacity: 1;
+    }
+
+  }
+  & .slick-dots button{
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $active-regular-color;
+    opacity: 0.2;
+    border-radius: 50%;
+    border: white;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "variables";
+
+
+.trust-us {
+  padding: 0 100px 60px;
+  @media screen and (max-width: 1919px){
+    padding: 0;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Montserrat-bold',sans-serif;
+    color: $main-regular;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+  }
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3,120px);
+    grid-auto-rows: 120px;
+    @media screen and (max-width: 1919px){
+      grid-template-columns: repeat(4, minmax(360px, 1fr));
+    }
+    @media screen and (max-width: 1439px){
+      grid-template-columns: repeat(4, minmax(256px, 1fr));
+    }
+    @media screen and (max-width: 1023px){
+      grid-template-columns: repeat(3, minmax(256px, 1fr));
+    }
+    @media screen and (max-width: 767px){
+      grid-template-columns:  minmax(375px, 1fr);
+    }
+  }
+  &__col {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   &:first-child{
+     background: #1C4280;
+     border-radius: 12px 0 0 0;
+     @media screen and (max-width: 1919px){
+       border-radius: 0;
+     }
+   }
+    &:nth-child(2){
+      background: #143646;
+    }
+    &:nth-child(3){
+      background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+    }
+    &:nth-child(4){
+      background: #9E4DC3;
+      border-radius: 0 12px 0 0;
+      @media screen and (max-width: 1919px){
+        border-radius: 0;
+      }
+    }
+    &:nth-child(5){
+      background: #FD9339;
+    }
+    &:nth-child(6){
+      background: #E2E2E4
+    }
+    &:nth-child(7){
+      background: #C71C36;
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    &:nth-child(8){
+      background: #DCF3F9;
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    &:nth-child(9){
+      background: #EAEAEA;
+      border-radius: 0 0 0 12px;
+      @media screen and (max-width: 1919px){
+        border-radius: 0;
+      }
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    &:nth-child(10){
+      background: #282240;
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    &:nth-child(11){
+      background: #1D4568;
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+    &:nth-child(12){
+      background: #000;
+      border-radius: 0 0 12px 0;
+      @media screen and (max-width: 1919px){
+        border-radius: 0;
+      }
+      @media screen and (max-width: 767px){
+        display: none;
+      }
+    }
+  }
+}

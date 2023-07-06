@@ -1,0 +1,124 @@
+@import "variables";
+
+.footer {
+  padding: 30px 160px;
+  background: $bg;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @media screen and (max-width: 1919px){
+    padding: 30px 60px;
+  }
+  @media screen and (max-width: 1023px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  @media screen and (max-width: 767px){
+    padding: 30px;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 21px;
+    @media screen and (max-width: 767px){
+      align-items: center;
+    }
+  }
+  &__place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    @media screen and (max-width: 767px){
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__address {
+    color: $main-regular;
+    font-family: 'Montserrat-regular',sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__on-map {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: $active-regular-color;
+    &:hover{
+      text-decoration: none;
+      color: $active-regular-color;
+    }
+  }
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+    @media screen and (max-width: 767px){
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__ico {
+    height: 38px;
+  }
+
+  &__facebook {
+    transition: all 0.3s ease-out;
+    &:hover{
+      fill: $accent-color;
+      text-decoration: none;
+    }
+  }
+  &__phone {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: $main-alt;
+    transition: all 0.3s ease-out;
+    &:hover{
+      color: $main-alt;
+    }
+  }
+  &__mail {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: $active-regular-color;
+    transition: all 0.3s ease-out;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &__copyright {
+    margin: 0;
+    font-family: 'Montserrat-regular',sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: $text-color;
+  }
+
+  &__on-map.point::before,
+  &__phone.point::before,
+  &__mail.point::before{
+    top: 5px;
+    left: -16px;
+    background: $text-color;
+  }
+}
+
+
+
+
+

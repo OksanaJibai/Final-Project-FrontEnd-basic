@@ -1,0 +1,109 @@
+@import "variables";
+
+.tabs {
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  @media  screen and (max-width: 1439px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media  screen and (max-width: 1023px){
+    flex-direction: column;
+  }
+  &__wrap {
+    padding: 0 60px 0 0;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+    @media  screen and (max-width: 1023px){
+      padding: 0 0 60px;
+      border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      border-right: none;
+
+    }
+    @media  screen and (max-width: 767px){
+      padding: 0 0 30px;
+    }
+  }
+  &__set {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    @media  screen and (max-width: 1023px){
+      flex-direction: row;
+    }
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+  &__item{
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    display: block;
+    text-decoration: none;
+    color: $text-color;
+    width: 375px;
+    text-align: right;
+    transition: all 0.3s ease-in;
+    @media  screen and (max-width: 1023px){
+      text-align: left;
+      width: auto;
+    }
+    &.active{
+      background: $gradient-text-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    &:hover{
+      color: $accent-color;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 0 0 60px;
+    @media  screen and (max-width: 1023px){
+      padding: 60px 0 0;
+    }
+    @media  screen and (max-width: 767px){
+      padding: 30px 0 0;
+    }
+  }
+  &__content {
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  &__title {
+    font-family: 'Montserrat-bold',sans-serif;
+    font-size: 30px;
+    line-height: 37px;
+    color: $white;
+    margin: 0 0 30px;
+    @media  screen and (max-width: 767px){
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 30px;
+    color: $white;
+    margin: 0;
+  }
+}

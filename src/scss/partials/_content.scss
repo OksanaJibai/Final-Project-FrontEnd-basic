@@ -1,0 +1,113 @@
+@import "variables";
+
+.content{
+  padding: 0 160px;
+  margin: 0 0 60px;
+  @media screen and (max-width: 1919px) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.subject{
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Montserrat-bold',sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $active-regular-color;
+  margin: 0 0 10px;
+  transition: all 0.3s ease-in;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 5px;
+    border: solid $active-regular-color;
+    border-width: 2px 2px 0 0;
+    transition: all 0.2s ease-in;
+    transform: rotate(45deg);
+  }
+  &:hover{
+    color: $accent-color;
+    text-decoration: none;
+  }
+  &:hover::after{
+    border-color: $accent-color;
+  }
+}
+.gradient{
+  background: $gradient-text-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.services{
+  margin: 0;
+  &__heading {
+    margin: 0 0 60px;
+    @media screen and (max-width: 767px){
+      margin-bottom: 30px;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    @media screen and (max-width: 767px) {
+      flex-flow: column nowrap;
+      gap: 30px;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 40px);
+    @media screen and (max-width: 1023px){
+      width: calc(50% - 30px);
+    }
+    @media screen and (max-width: 767px){
+      width: 100%;
+    }
+  }
+  &__img-wrap{
+    background-color: $white;
+    border-radius: 24px;
+    margin: 0 0 30px;
+    width: 92px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title-link{
+    font-size: 22px;
+    line-height: 27px;
+    font-family: 'Montserrat-bold',sans-serif;
+    color: $active-regular-color;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+    &:hover{
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+  &__title {
+    margin: 0 0 15px;
+  }
+  &__text {
+    font-family: 'Montserrat-regular',sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: $white;
+    margin: 0;
+  }
+}
